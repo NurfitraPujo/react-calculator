@@ -1,5 +1,6 @@
 import { ChakraProvider, CSSReset, extendTheme, theme } from "@chakra-ui/react";
 import { StoryContext } from "@storybook/react";
+import React from "react";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
