@@ -21,12 +21,12 @@ const Template: Story<CalculatorKeyProps> = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  label: "0",
-  handler: () => console.log("clicked"),
+  value: "0",
+  handler: () => console.log(Default.args?.value),
 };
 
 Default.argTypes = {
   handler: {
-    action: "clicked",
+    action: Default.args.value,
   },
 };

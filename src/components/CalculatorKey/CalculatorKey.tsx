@@ -3,20 +3,20 @@ import { Button } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 type CalculatorKeyProps = {
-  handler: () => unknown;
-  label: ReactNode;
+  handler: (value: string | number) => unknown;
+  value: string | number;
 };
 
-function CalculatorKey({ handler, label }: CalculatorKeyProps) {
+function CalculatorKey({ handler, value }: CalculatorKeyProps) {
   return (
     <Button
       p="3"
       colorScheme="gray"
       fontWeight="semibold"
-      onClick={handler}
+      onClick={() => handler(value)}
       w="100%"
     >
-      {label}
+      {value}
     </Button>
   );
 }
