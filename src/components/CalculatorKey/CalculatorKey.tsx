@@ -1,17 +1,17 @@
 import React from "react";
-import { Box } from "@chakra-ui/layout";
+import { Button } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 type CalculatorKeyProps = {
-  handler: Function;
+  handler: () => unknown;
   label: ReactNode;
 };
 
 function CalculatorKey({ handler, label }: CalculatorKeyProps) {
   return (
-    <Box p="3" color="orange" bgColor="white">
+    <Button p="3" colorScheme="gray" fontWeight="semibold" onClick={handler}>
       {label}
-    </Box>
+    </Button>
   );
 }
 

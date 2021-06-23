@@ -15,4 +15,11 @@ export const Default = Template.bind({});
 
 Default.args = {
   label: "0",
+  handler: () => console.log("clicked"),
+};
+
+Default.argTypes = {
+  handler: {
+    action: "clicked",
+  },
 };
