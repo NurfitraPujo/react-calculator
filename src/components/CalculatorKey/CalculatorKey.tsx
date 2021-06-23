@@ -9,7 +9,13 @@ type CalculatorKeyProps = {
 
 function CalculatorKey({ handler, label }: CalculatorKeyProps) {
   return (
-    <Button p="3" colorScheme="gray" fontWeight="semibold" onClick={handler}>
+    <Button
+      p="3"
+      colorScheme="gray"
+      fontWeight="semibold"
+      onClick={handler}
+      w="100%"
+    >
       {label}
     </Button>
   );

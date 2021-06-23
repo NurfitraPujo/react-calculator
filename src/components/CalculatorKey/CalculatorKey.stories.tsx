@@ -5,6 +5,13 @@ import { CalculatorKey, CalculatorKeyProps } from "./CalculatorKey";
 export default {
   component: CalculatorKey,
   title: "Component/CalculatorKey",
+  decorators: [
+    (Story: Function) => (
+      <div style={{ width: 100 }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 const Template: Story<CalculatorKeyProps> = (args) => (
